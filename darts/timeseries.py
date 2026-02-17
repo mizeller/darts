@@ -4836,8 +4836,8 @@ class TimeSeries:
             A new series containing the desired quantile(s) of each component.
         """
         self._assert_stochastic()
-        if isinstance(q, int | float):
-            q = [float(q)]
+        if isinstance(q, float):
+            q = [q]
 
         if not all([0 <= q_i <= 1 for q_i in q]):
             raise_log(

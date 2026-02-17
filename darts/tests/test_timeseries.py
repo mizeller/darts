@@ -438,11 +438,6 @@ class TestTimeSeries:
             q_ts = ts.quantile(q=q)
             assert (abs(q_ts.values() - np.quantile(values, q=q, axis=2)) < 1e-3).all()
 
-        _q: int = 1
-        assert (
-            abs(ts.quantile(q=_q).values() - np.quantile(values, q=_q, axis=2)) < 1e-3
-        ).all()
-
     def test_quantiles_df(self):
         q = (0.01, 0.1, 0.5, 0.95)
         values = np.random.rand(10, 1, 1000)
