@@ -4433,8 +4433,8 @@ class TimeSeries:
         max_nr_components: int = 10,
         ax: matplotlib.axes.Axes | None = None,
         alpha: float | None = None,
-        color: str | tuple | Sequence[str, tuple] | None = None,
-        c: str | tuple | Sequence[str, tuple] | None = None,
+        color: str | tuple | Sequence[str | tuple] | None = None,
+        c: str | tuple | Sequence[str | tuple] | None = None,
         *args,
         **kwargs,
     ) -> matplotlib.axes.Axes:
