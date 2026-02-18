@@ -43,7 +43,7 @@ def constant_timeseries(
     length: int | None = None,
     freq: str | int | None = None,
     column_name: str | None = "constant",
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
 ) -> TimeSeries:
     """
     Creates a constant univariate TimeSeries with the given value, length (or end date), start date and frequency.
@@ -99,7 +99,7 @@ def linear_timeseries(
     length: int | None = None,
     freq: str | int | None = None,
     column_name: str | None = "linear",
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
 ) -> TimeSeries:
     """
     Creates a univariate TimeSeries with a starting value of `start_value` that increases linearly such that
@@ -162,7 +162,7 @@ def sine_timeseries(
     length: int | None = None,
     freq: str | int | None = None,
     column_name: str | None = "sine",
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
 ) -> TimeSeries:
     """
     Creates a univariate TimeSeries with a sinusoidal value progression with a given frequency, amplitude,
@@ -229,7 +229,7 @@ def gaussian_timeseries(
     length: int | None = None,
     freq: str | int | None = None,
     column_name: str | None = "gaussian",
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
 ) -> TimeSeries:
     """
     Creates a gaussian univariate TimeSeries by sampling all the series values independently,
@@ -309,7 +309,7 @@ def random_walk_timeseries(
     length: int | None = None,
     freq: str | int | None = None,
     column_name: str | None = "random_walk",
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
 ) -> TimeSeries:
     """
     Creates a random walk univariate TimeSeries, where each step is obtained by sampling a gaussian distribution
@@ -368,7 +368,7 @@ def autoregressive_timeseries(
     length: int | None = None,
     freq: str | int | None = None,
     column_name: str | None = "autoregressive",
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
 ) -> TimeSeries:
     """
     Creates a univariate, autoregressive TimeSeries whose values are calculated using specified coefficients `coef` and
@@ -482,7 +482,7 @@ def holidays_timeseries(
     column_name: str | None = "holidays",
     until: int | str | pd.Timestamp | None = None,
     add_length: int = 0,
-    dtype: np.dtype = np.float64,
+    dtype: np.typing.DTypeLike = np.float64,
     tz: Any = None,
 ) -> TimeSeries:
     """
