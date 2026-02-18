@@ -135,7 +135,7 @@ def _bartlett_formula(r: np.ndarray, m: int, length: int) -> float:
 
 def extract_trend_and_seasonality(
     ts: TimeSeries,
-    freq: int | Sequence[int] = None,
+    freq: int | Sequence[int] | None = None,
     model: SeasonalityMode | ModelMode = ModelMode.MULTIPLICATIVE,
     method: str = "naive",
     **kwargs,
@@ -305,7 +305,7 @@ def remove_from_series(
 
 def remove_seasonality(
     ts: TimeSeries,
-    freq: int = None,
+    freq: int | None = None,
     model: SeasonalityMode = SeasonalityMode.MULTIPLICATIVE,
     method: str = "naive",
     **kwargs,
@@ -1106,7 +1106,7 @@ def plot_tolerance_curve(
     q: float | list[float] | None = None,
     n_jobs: int = 1,
     verbose: bool = False,
-    fig_size: tuple[int, int] = None,
+    fig_size: tuple[int, int] | None = None,
     axis: matplotlib.axes.Axes | None = None,
 ) -> None:
     """
