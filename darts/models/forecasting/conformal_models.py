@@ -247,7 +247,7 @@ class ConformalModel(GlobalForecastingModel, ABC):
         series: TimeSeries | Sequence[TimeSeries] | None = None,
         past_covariates: TimeSeries | Sequence[TimeSeries] | None = None,
         future_covariates: TimeSeries | Sequence[TimeSeries] | None = None,
-        series: TimeSeriesLike = None,
+        series: TimeSeriesLike | None = None,
         past_covariates: TimeSeriesLike | None = None,
         future_covariates: TimeSeriesLike | None = None,
         num_samples: int = 1,
